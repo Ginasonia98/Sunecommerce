@@ -4,16 +4,45 @@
   margin: 0;
 }
 
-.navbar {
+.topnav {
+  overflow: hidden;
+  background-color: #D61355;
   width: 100%;
-  height: 10vh;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 60px;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
   color: white;
-  padding: 10px;
-  font-weight: bold;
+}
+
+.topnav-right {
+  float: right;
+}
+
+.ecommerce-text {
+  color: white;
+  font-size: 25px;
+  margin-top: -49px;
+  margin-left: 70px;
+}
+
+.ecommerce-icon {
+  margin-left: 20px;
+  margin-top: 8px !important;
 }
 
 .products-container {
@@ -52,7 +81,7 @@ img:hover {
 .footer {
   width: 100%;
   height: 10vh;
-  background-color: black;
+  background-color: #D61355;
   display: flex;
   align-items: center;
   color: white;
@@ -69,11 +98,25 @@ img:hover {
   flex-direction: column;
 }
 
+.text-login {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+
 .login-inputs {
   display: flex;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  box-shadow: 2px 2px 20px black;
+  border-radius: 5px;
+  margin-top: 15px;
+  width: 320px;
+  height: 250px;
+  background-color: #F2921D;
 }
 
 input {
@@ -81,6 +124,10 @@ input {
   width: 300px;
   border: 1px solid #cecece;
   margin: 10px 0;
+}
+
+.input-hover {
+  border: none;
 }
 
 small {
@@ -92,7 +139,7 @@ button {
   width: 300px;
   border: 1px solid #cecece;
   margin: 10px 0;
-  background-color: black;
+  background-color: #30E3DF;
   color: white;
 }
 
@@ -100,7 +147,16 @@ button {
   padding: 10px;
   width: 100px;
   border: 1px solid #cecece;
-  margin-left: 50px;
-  background-color: black;
+  background-color: #D61355;
   color: white;
+  margin-top: -35px !important;
+  margin-left: -140px !important;
+  position: absolute;
+}
+
+
+@media (width < 768px) {
+  .log-out-btn {
+    margin-left: -10px !important;
+  }
 }

@@ -7,21 +7,21 @@ const Products = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
 
-  useEffect (() =>{
+  useEffect(() => {
     setLoading(true);
     axios({
       method: "GET",
       url: "https://fakestoreapi.com/products",
     })
-      .then((res) =>{
+      .then((res) => {
         console.log(res.data);
         setData(res.data);
       })
       .catch((e) => console.log(e))
       .finally(() => setLoading(false));
-  },[]);
+  }, []);
   return (
-    <div className="products-container">
+    <div className="products-container ">
       {loading && (
         <div>
           {" "}

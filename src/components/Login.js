@@ -31,8 +31,16 @@ const Login = ({ token, setToken }) => {
   };
 
   return (
-    <div className="login">
-      <div className="login-inputs">
+    <div
+      className="login "
+      style={{
+        backgroundImage: `url("https://i.pinimg.com/564x/4f/1b/f7/4f1bf740871685e8f233ee0cb54101f3.jpg")`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="login-inputs py-3 px-2">
+        <div className="text-login ">Login</div>
         <input
           value={userName}
           onChange={(e) => setUsername(e.target.value)}
@@ -47,6 +55,12 @@ const Login = ({ token, setToken }) => {
         />
         {error && <small>{error}</small>}
         <button onClick={loginHandler}>Login</button>
+        <br/>
+        <div className="register-text" style={{
+          color:"white",
+        }}>
+          Belum Memiliki Akun, Silahkan Register!
+        </div>
       </div>
     </div>
   );
