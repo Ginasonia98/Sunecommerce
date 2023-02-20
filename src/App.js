@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 import Products from './components/Product';
 import Login from './components/Login';
 import { useState } from "react";

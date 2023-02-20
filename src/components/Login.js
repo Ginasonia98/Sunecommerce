@@ -1,6 +1,6 @@
-import React,{useState} from 'react'
+import React, { useState } from "react";
 import "../App.css";
-import axios from 'axios';
+import axios from "axios";
 
 const Login = ({ token, setToken }) => {
   const [userName, setUsername] = useState("");
@@ -32,21 +32,20 @@ const Login = ({ token, setToken }) => {
 
   return (
     <div
-      className="login "
-      style={{
-        backgroundImage: `url("https://i.pinimg.com/564x/4f/1b/f7/4f1bf740871685e8f233ee0cb54101f3.jpg")`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="login-form"
     >
-      <div className="login-inputs py-3 px-2">
-        <div className="text-login ">Login</div>
+        <h2 className="text-white text-decoration-underline">Login Form</h2>
+        <div className="form-group">
+        <label htmlFor="username" className="text-white">Username</label>
         <input
           value={userName}
           onChange={(e) => setUsername(e.target.value)}
           type="text"
           placeholder="Username"
         />
+        </div>
+        <div className="form-group">
+        <label htmlFor="password" className="text-white">Password</label>
         <input
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -54,16 +53,21 @@ const Login = ({ token, setToken }) => {
           placeholder="Password"
         />
         {error && <small>{error}</small>}
-        <button onClick={loginHandler}>Login</button>
-        <br/>
-        <div className="register-text" style={{
-          color:"white",
-        }}>
-          Belum Memiliki Akun, Silahkan Register!
         </div>
-      </div>
+        <button className="mt-3 text-white bg-primary w-25" style={{border:"none"}} onClick={loginHandler}>Login</button>
+        <br />
+        <div
+          className="register-text mt-2"
+          style={{
+            color: "white",
+          }}
+        >
+          Belum Memiliki Akun
+          <span className=" ms-2 text-decoration-underline">Silahkan Register!
+          </span>
+        </div>
     </div>
   );
 };
 
-export default Login
+export default Login;
